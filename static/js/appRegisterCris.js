@@ -1,4 +1,5 @@
 
-function register_user() {
-    alert("Register button clicked")
+function register_inventory() {
+    alert("HOLAA")
+    //windows.location = '/register_inventory'
 }

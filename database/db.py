@@ -17,14 +17,22 @@ def connection_SQL():
         return conecction
     except Exception as err:
         print("Error", err)
+        return None          
+    
+def insert(id, marca, modelo, cilindraje, color, precio):
+    try:
+        instruction = "INSERT INTO tbMotocicletas (id, marca, modelo, cilindraje, color, precio) VALUES (%s, %s, %s, %s, %s, %s)"
+        connection = connection_SQL()
+        cursor = connection.cursor()
+        cursor.execute(instruction, (id, marca, modelo, cilindraje, color, precio))
+        connection.commit()
+        print("Motocicleta Agregada")
+    except pymysql.err.IntegrityError as err:
+        print("Error: Duplicate ID", err)
+        return "Duplicate ID"
+    except Exception as err:
+        print("Error", err)
         return None
-        
-def insert():
-    instruction = "INSERT INTO tbMotocicletas (marca, modelo, cilindraje, color, precio) VALUES('Yamaha', 'YZF-R3', '321cc', 'Azul', 20000000);"
-    conecction = connection_SQL()
-    cursor = conecction.cursor()
-    cursor.execute(instruction)
-    conecction.commit()
-    print("Motocicleta Agregada")
-
-insert()
+    finally:
+        cursor.close()
+        connection.close()
