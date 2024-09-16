@@ -1,19 +1,103 @@
-h1, form {
-    text-align: center;
-}
-
 body {
-    background-color: antiquewhite;
+    font-family: 'Arial', sans-serif;
+    background: url('https://media.revistagq.com/photos/5ff8504d114e9a35bb4f36de/master/pass/motos-bonitas-cover.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
-button {
-    background-color: black;
+.banner {
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    font-size: 20px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-family: 'Permanent Marker';
+    font-size: 2em; /* Tamaño de letra ajustado para el banner */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.banner h1 {
+    background-color: #4ca8af;
+    display: inline-block;
+    padding: 10px;
     border-radius: 10px;
-    padding: 7px;
+    color: white; /* Asegura que el texto sea blanco */
+}
+
+.signature {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Permanent Marker';
+    font-size: 0.8em; /* Tamaño de letra reducido para la firma */
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 400px;
+    margin-top: 150px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
 }
 
 form {
-    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"], input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px;
+    background-color: #4ca8af;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #cc3838;
 }

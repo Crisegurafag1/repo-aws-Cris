@@ -3,18 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario de Motocicletas</title>
     <link rel="stylesheet" href="static/css/styleRegisterCris.css">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <script src="static/js/appRegisterCris.js"></script>
-    <title>Web App</title>
+    
 </head>
 <body>
-    <h1> Register Pruebas  </h1>
-    <form>
-        <label> Id </label> <input> <br> <br>
-        <label> Name </label> <input> <br> <br>
-        <label> Lastname </label> <input> <br> <br>
-        <label> Birthday </label>  <input> <br> <br>
-        <button onclick="register_user()"> Register </button>
-    </form>
+    <div class="banner">
+        <h1>Concesionario de Motocicletas</h1>
+        <div class="signature">Cristian Segura   </div>
+    </div>
+    <div class="container">
+        <h1>Registro de Motocicletas</h1>
+        <form action="register_motorcycle.php" method="post">
+            <div class="form-group">
+                <label for="marca">Marca:</label>
+                <input type="text" id="marca" name="marca" required>
+            </div>
+            <div class="form-group">
+                <label for="modelo">Modelo:</label>
+                <input type="text" id="modelo" name="modelo" required>
+            </div>
+            <div class="form-group">
+                <label for="cilindraje">Cilindraje:</label>
+                <input type="text" id="cilindraje" name="cilindraje" required>
+            </div>
+            <div class="form-group">
+                <label for="color">Color:</label>
+                <input type="text" id="color" name="color" required>
+            </div>
+            <div class="form-group">
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" name="precio" step="0.01" required>
+            </div>
+            <button type="submit">Registrar Moto</button>
+        </form>
+    </div>
 </body>
 </html>
+
