@@ -24,7 +24,12 @@ def register_inventory():
         return "An error occurred while adding the motorcycle"
     return "Motorcycle Added"
 
-     
+@app.route('/consult_user')
+def consult_inventory():
+    result = consult('40034546')
+    print(result)        
+    return "La motocicleta se consulto"
+
 if __name__ == "__main__":    
     host = "172.31.35.175"
     port = 80

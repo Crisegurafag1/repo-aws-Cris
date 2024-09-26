@@ -36,3 +36,15 @@ def insert(id, marca, modelo, cilindraje, color, precio):
     finally:
         cursor.close()
         connection.close()
+
+def consult(id):
+    try:
+        instruction = "SELECT * FROM dbConcesionario.tbMotocicletas WHERE id=" + id
+        connection = connection_SQL()
+        cursor = connection.cursor()
+        cursor.execute(instruction)
+        result = cursor.fetchall()
+        return result          
+    except Exception as err:
+        print("Error", err)
+        return None
