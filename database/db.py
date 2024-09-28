@@ -17,7 +17,7 @@ def connection_SQL():
         return conecction
     except Exception as err:
         print("Error", err)
-        return None          
+        return None
     
 def insert(id, marca, modelo, cilindraje, color, precio):
     try:
