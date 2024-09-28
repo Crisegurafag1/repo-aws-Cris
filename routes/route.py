@@ -2,6 +2,10 @@ from flask import Flask, render_template, request
 from serverCris import app
 from database.db import *
 
+@app.route('/home_page')
+def home_page():
+    return render_template("HomeCris.html")
+
 @app.route('/register_page')
 def register_page():
     return render_template("RegisterCris.html")

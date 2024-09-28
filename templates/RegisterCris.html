@@ -7,12 +7,11 @@
     <link rel="stylesheet" href="static/css/styleRegisterCris.css">
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <script src="static/js/appRegisterCris.js"></script>
-    
 </head>
 <body>
     <div class="banner">
         <h1>Concesionario de Motocicletas</h1>
-        <div class="signature">Cristian Segura   </div>
+        <div class="signature">Cristian Segura</div>
     </div>
     <div class="container">
         <h1>Registro de Motocicletas</h1>
@@ -41,9 +40,15 @@
                 <label for="precio">Precio:</label>
                 <input type="number" id="precio" name="precio" step="0.01" required>
             </div>
+            <div class="form-group">
+                <label for="photo">Foto:</label>
+                <input type="file" id="photo" name="photo" required>
+                <label for="photo" class="custom-file-upload">Seleccionar archivo</label>
+                <span id="file-name">Ningún archivo seleccionado</span>
+            </div>
             <button type="submit">Registrar Moto</button>
         </form>
+        <a href="/home_page" class="button">Volver al Inicio</a>
     </div>
 </body>
 </html>
-

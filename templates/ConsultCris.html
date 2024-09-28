@@ -9,11 +9,22 @@
     <script src="static/js/appConsultCris.js"></script>
 </head>
 <body>
-    <h1>Consult Inventory</h1>
-    <div>
-        <label> Id </label> <input id="ident"> <br> <br>
-        <textarea> </textarea> <br> <br>
-        <button onclick="consult_inventory()"> Consult </button>
+    <div class="banner">
+        <h1>Concesionario de Motocicletas</h1>
+        <div class="signature">Cristian Segura</div>
+    </div>
+    <div class="container">
+        <h1>Consulta de Inventario</h1>
+        <div class="form-group">
+            <label for="ident">Id:</label>
+            <input type="text" id="ident" name="ident">
+        </div>
+        <div class="form-group">
+            <label for="result">Resultado:</label>
+            <textarea id="result" name="result" rows="4" cols="50"></textarea>
+        </div>
+        <button onclick="consult_inventory()">Consultar</button>
+        <a href="/home_page" class="button">Volver al Inicio</a>
     </div>
 </body>
 </html>
