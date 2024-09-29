@@ -10,4 +10,5 @@ function consult_inventory() {
     .then(data => 
         
         alert(data.marca))
+        document.getElementById("result").value = data.marca + "\n" + data.modelo + "\n" + data.color
 }
