@@ -80,7 +80,7 @@ label {
     color: #555;
 }
 
-input[type="text"], input[type="number"] {
+input[type="text"], input[type="number"], input[type="file"] {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -122,13 +122,20 @@ button:hover {
     width: 100%; /* Ancho añadido */
     box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
 }
+
 .button:hover {
     background-color: #cc3838;
 }
 
+/* Estilos adicionales para la selección de archivos */
+.custom-file-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+    font-size: 16px; /* Tamaño de letra */
+}
 
-
-/* Estilos para el campo de archivo */
 input[type="file"] {
     display: none; /* Oculta el campo de archivo original */
 }
@@ -147,10 +154,4 @@ input[type="file"] {
 
 .custom-file-upload:hover {
     background-color: #cc3838;
-}
-
-#file-name {
-    display: block;
-    margin-top: 5px;
-    color: #555;
 }

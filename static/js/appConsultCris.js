@@ -6,4 +6,8 @@ function consult_inventory() {
         "headers":{"Content-Type":"application/json"},
         "body": JSON.stringify(id)
     })
+    .then(resp => resp.json())
+    .then(data => 
+        
+        alert(data.marca))
 }
