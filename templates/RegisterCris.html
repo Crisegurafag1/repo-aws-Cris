@@ -15,7 +15,7 @@
     </div>
     <div class="container">
         <h1>Registro de Motocicletas</h1>
-        <form action="/register_inventory" method="post" enctype="multipart/form-data">
+        <form id="registerForm" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="id">Id:</label>
                 <input type="text" id="id" name="id" required>
@@ -45,8 +45,9 @@
                 <input type="file" id="photo" name="photo" required>
                 <label for="photo" class="custom-file-upload">Seleccionar Archivo</label>
             </div>
-            <button type="submit">Registrar Moto</button>
+            <button type="button" onclick="register_inventory()">Registrar Moto</button>
         </form>
+        <div id="notification" style="display: none; background-color: #f0f0f0; padding: 10px; margin-top: 10px; border: 1px solid #ccc;"></div>
         <a href="/home_page" class="button">Volver al Inicio</a>
     </div>
 </body>

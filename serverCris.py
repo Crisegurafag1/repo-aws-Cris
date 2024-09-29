@@ -5,6 +5,6 @@ app = Flask(__name__)
 from routes.route import *
 
 if __name__ == "__main__":    
-    host = "172.31.35.175"
+    host = "172.31.13.216"
     port = 80
     app.run(host, port, True)
